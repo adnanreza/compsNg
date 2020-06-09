@@ -1,1 +1,14 @@
-<p>table works!</p>
+<table class="ui table">
+  <thead>
+    <tr>
+      <th *ngFor="let h of headers">{{ h.label }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let record of data">
+      <td *ngFor="let h of headers">
+        {{ record[h.key] }}
+      </td>
+    </tr>
+  </tbody>
+</table>
